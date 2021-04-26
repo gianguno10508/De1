@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 1</title>
+	<link rel="stylesheet" type="text/css" href="Icon-font-7-stroke-PIXEDEN-v-1.2.0/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/queries.css">
+	<script type="text/javascript" src="css/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="css/scripts.js"></script>
+</head>
+<body>
+	<div class="search">
+		<div class="content">
+			<div class="main-search">
+				<input type="text" id="mySearch" onkeyup="myFunction()" onclick="list_search()" placeholder="search">
+				<i class="i-search fas fa-search"></i>					
+			</div>
+			<div class="l-search">
+				<div class="list-s">
+					<ul>
+						<a href="#"><li>Đại bàng</li></a>
+						<a href="#"><li>Ba lỗ</li></a>
+						<a href="#"><li>Sói</li></a>
+						<a href="#"><li>Rồng</li></a>
+						<a href="#"><li>Giầy đỏ</li></a>
+					</ul>	
+				</div>	
+			</div>
+			<div class="close-s">
+				<i onclick="close_search()" class="i-close fas fa-window-close"></i>	
+			</div>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="top-menu">
+			<div class="header-left">
+				<div class="i-left">
+					<i class="far fa-bookmark"></i>
+				</div>
+				<div class="p-left">
+					<p>Welcome to Franco - an e-Commerce PSD Template!</p>
+				</div>
+			</div>
+			<div class="header-right">
+				<div class="header-setting">
+					<div class="i-right">
+						<i class="fas fa-cog"></i>
+					</div>
+					<div class="p-right">
+						<p>Shop setting</p>
+					</div>					
+				</div>
+				<div class="header-lock">
+					<div class="i-right">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="p-right">
+						<p>Member Login</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-menu">
+			<div class="logo">
+				<a href="#"><img src="img/logo.jpg"></a>
+			</div>
+			<div class="menu">
+				<div class="content">
+					<div class="menu-content">
+						<ul>
+							<li><a href="#" style="color: #8262b5">HOME</a></li>
+							<li><a href="#">WOMEN</a></li>
+							<li><a href="#">MEN</a></li>
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#">BLOG</a></li>
+							<li><a href="#">COLLECTIONS</a></li>
+							<li><a href="#">CONTACT</a></li>
+							<li><a href="#"><i onclick="searchbox()" class="s i-search fas fa-search"></i></a></li>				
+						</ul>						
+					</div>
+					<div class="l-cart">
+						<div class="list-c">
+							<div class="cart-1">
+								<a href="#"><img class="img-cart" src="img/cart1.jpg"></a>	
+								<div class="p-cart">
+									<div class="cart-name">
+										<p>Quần nam vjp pro</p>					
+									</div>
+									<div class="cart-price">
+										<p>2.000.000Đ</p>								
+									</div>									
+								</div>
+							</div>
+							<div class="cart-2">
+								<a href="#"><img class="img-cart" src="img/cart2.jpg"></a>	
+								<div class="p-cart">
+									<div class="cart-name">
+										<p>Áo vjp pro</p>					
+									</div>
+									<div class="cart-price">
+										<p>5.999.999Đ</p>								
+									</div>
+								</div>	
+							</div>	
+						</div>
+					</div>				
+				</div>
+			</div>
+			<div class="menu-bars">
+				<i onclick="showMenu()" class="fas fa-bars"></i>
+			</div>	
+			<div class="icon-menu">
+				<ul>
+					<li><a href="#"><i class="pe-7s-like"></i></a></li>
+					<li><a href="#"><i onclick="cart()" class="pe-7s-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ads">
+		<div class="content">
+			<div class="mobile-banner">
+				<img onclick="changeImage()" id="slide" src="img/banner1.jpg">	
+				<div class="mobile-btn">
+					<div class="prev">
+						<div onclick="btnp()" id="prev">&#10094;</div>
+					</div>
+	        		<div class="next">
+	        			<div onclick="btnn()" id="next">&#10095;</div>	
+	        		</div>					
+				</div>							
+			</div>					
+			<div class="banner1">
+				<img src="img/banner1.jpg">
+				<div class="p-banner1">
+					<p>Two High-end Materials</p>
+				</div>
+				<div class="btn">
+					<div class="btn1">
+						<a href="#">Shop Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="banner2">
+				<img src="img/banner2.jpg">
+				<div class="p-banner2">
+					<div class="p1-banner2">
+						<p>SMALL THING</p>
+					</div>
+					<div class="p2-banner2">
+						<p>MAKE DIFFERENT</p>
+					</div>
+				</div>
+			</div>
+			<div class="banner3">
+				<img src="img/banner3.jpg">
+				<div class="p-banner3">
+					<div class="p1-banner3">
+						<p>FOLIO</p>
+					</div>
+					<div class="p2-banner3">
+						<p>BACKPACK</p>
+					</div>
+				</div>
+				<div class="btn">
+					<div class="btn2">
+						<a href="#">Shop Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="products">
+			<div class="content">
+				<div class="feat">
+					<div class="p-fran">
+						<p>FRANCO</p>
+					</div>
+					<div class="p-feat">
+						<h2>FEATURED ITEMS</h2>
+					</div>
+				</div>
+				<div class="main-products">
+					<div class="row1">
+						<div class="col col1">
+							<div class="img-col">
+								<img src="img/product1.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Suspendisse id volutpat</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col col2">
+							<div class="img-col">
+								<img src="img/product2.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Lorem ipsum dolor</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>							
+						</div>
+						<div class="col col3">
+							<div class="img-col">
+								<img src="img/product3.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Proin sed nulla mi</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col col4">
+							<div class="img-col">
+								<img src="img/product4.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Aenean placerat</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row2">
+						<div class="col col1">
+							<div class="img-col">
+								<img src="img/product5.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Suspendisse id volutpat</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+						<div class="col col2">
+							<div class="img-col">
+								<img src="img/product6.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Lorem ipsum dolor</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col col3">
+							<div class="img-col">
+								<img src="img/product7.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Proin sed nulla mi</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col col4">
+							<div class="img-col">
+								<img src="img/product8.jpg">
+							</div>
+							<div class="add-to-cart">
+								<a href="#">ADD TO CART</a>
+							</div>
+							<div class="info">
+								<div class="p-info">
+									<p>Aenean placerat</p>
+								</div>
+								<div class="rate">
+									<ul>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star yel"></i>
+										<i class="far fa-star gray"></i>
+									</ul>
+								</div>
+								<div class="price">
+									<ul>
+										<li class="old-price">$99.00</li>
+										<li class="new-price">$84.00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="show-products">
+					<div class="pro-dot">
+						<div class="pro-dot1">
+							<p onclick="showProduct1()">.</p>
+						</div>
+						<div class="pro-dot3">
+							<p onclick="showProduct2()">.</p>
+						</div>												
+					</div>					
+				</div>
+			</div>
+	</div>
+	<div class="blog">
+		<div class="content">
+			<div class="p-news">
+				<div class="p-last">
+					<p>LATEST</p>
+				</div>
+				<div class="p-n-e">
+					<p>NEWS & EVENTS</p>
+				</div>					
+			</div>
+			<div class="row3">
+				<div class="col-news col5">
+					<div class="img-news">
+						<img src="img/news1.jpg">
+						<div class="p-img">
+							<div class="p-main-img">
+								<div class="p-jan">
+									<p>Jan</p>
+								</div>
+								<div class="p-23">
+									<p>23</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="p-title">
+						<a href="#">In commodo dolor vitae</a>
+					</div>
+					<div class="p-content">
+						<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+					</div>
+					<div class="icon-news">
+						<div class="i-comment">
+							<div class="i-c">
+								<i class="far fa-comment"></i>
+							</div>
+							<div class="p-c">
+								<p>12</p>
+							</div>
+						</div>
+						<div class="i-heart">
+							<div class="i-h">
+								<i class="far fa-heart"></i>
+							</div>
+							<div class="p-h">
+								<p>6</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-news col6">
+					<div class="img-news">
+						<img src="img/news2.jpg">
+						<div class="p-img">
+							<div class="p-main-img">
+								<div class="p-jan">
+									<p>Jan</p>
+								</div>
+								<div class="p-23">
+									<p>23</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="p-title">
+						<a href="#">Vivamus non dignissim elit</a>
+					</div>
+					<div class="p-content">
+						<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+					</div>
+					<div class="icon-news">
+						<div class="i-comment">
+							<div class="i-c">
+								<i class="far fa-comment"></i>
+							</div>
+							<div class="p-c">
+								<p>12</p>
+							</div>
+						</div>
+						<div class="i-heart">
+							<div class="i-h">
+								<i class="far fa-heart"></i>
+							</div>
+							<div class="p-h">
+								<p>6</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-news col7">
+					<div class="img-news">
+						<img src="img/news3.jpg">
+						<div class="p-img">
+							<div class="p-main-img">
+								<div class="p-jan">
+									<p>Jan</p>
+								</div>
+								<div class="p-23">
+									<p>23</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="p-title">
+						<a href="#">Ut lacinia erat ut diam volutpat</a>
+					</div>
+					<div class="p-content">
+						<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+					</div>
+					<div class="icon-news">
+						<div class="i-comment">
+							<div class="i-c">
+								<i class="far fa-comment"></i>
+							</div>
+							<div class="p-c">
+								<p>12</p>
+							</div>
+						</div>
+						<div class="i-heart">
+							<div class="i-h">
+								<i class="far fa-heart"></i>
+							</div>
+							<div class="p-h">
+								<p>6</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dot">
+				<a href="#" class="dot1">.</a>
+				<a href="#" class="dot2">.</a>
+				<a href="#" class="dot3">.</a>
+			</div>			
+		</div>		
+	</div>
+	<div class="footer">
+		<div class="content">
+			<div class="contact">	
+				<div class="row4">
+						<div class="col col1">
+							<div class="about-title">
+								<p>About Franco</p>
+							</div>
+							<div class="about-content">
+								<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris vulputate mi, eu interdum nunc diam at ipsum.</p>
+							</div>
+							<div class="about-icons">
+								<ul>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+									<li><a href="#"><i class="fab fa-behance"></i></a></li>
+									<li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col col2">
+							<div class="nav-title">
+								<p>Navigation</p>
+							</div>
+							<div class="nav-select">
+								<div class="select-1">
+									<ul>
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">Our Blog</a></li>
+										<li class="women"><a href="#">Women</a></li>
+										<li><a href="#">Men</a></li>
+										<li><a href="#">Contact Us</a></li>
+									</ul>
+								</div>
+								<div class="select-2">
+									<ul>
+										<li><a href="#">FAQs</a></li>
+										<li><a href="#">Featured Brands</a></li>
+										<li><a href="#">Gift Vouchers</a></li>
+										<li><a href="#">Affiliates</a></li>
+										<li><a href="#">Specials Gift</a></li>
+										<li><a href="#">Terms & Conditions</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col col3">
+							<div class="shop-title">
+								<p>Shop Location</p>
+							</div>
+							<div class="shop-contact">
+								<div class="s-andress">
+									<div class="i-map">
+										<i class="far fa-map"></i>
+									</div>
+									<div class="p-map">
+										<p>500 Hennessy Road</p>
+									</div>
+									<div class="p-map1">
+										<p>Causeway Bay, Hong Kong</p>
+									</div>
+								</div>
+								<div class="s-phone">
+									<div class="i-phone">
+										<i class="fas fa-phone-alt"></i>
+									</div>
+									<div class="p-phone">
+										<p>+1 23456789</p>
+									</div>
+								</div>
+								<div class="s-mail">
+									<div class="i-mail">
+										<i class="far fa-envelope"></i>
+									</div>
+									<div class="p-mail">
+										<p>contact@yourdomain.com</p>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="last-footer">
+			<div class="content">
+				<div class="f-content">
+					<div class="f-left">
+						<i style="font-size: 14px; color: #888888;" class="far fa-copyright"></i>
+						<p>Copyright 2015 & Made with <i style="color: red" class="fas fa-heart"></i> by<p style="margin-left: 4px; color: #ffffff;">ArrowHitech.</p></p>
+					</div>
+					<div class="f-right">
+						<ul>
+							<li><i class="fab fa-cc-visa"></i></li>
+							<li><i class="fab fa-cc-paypal"></i></li>
+							<li><i class="fab fa-cc-mastercard"></i></li>
+							<li><i class="fab fa-cc-discover"></i></li>
+							<li><i class="fab fa-cc-amex"></i></li>
+						</ul>
+					</div>
+				</div>					
+			</div>
+		</div>			
+	</div>
+</body>
